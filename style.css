@@ -1,0 +1,151 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: whitesmoke;
+}
+
+a#highscores-link {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+a#highscores-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+header.hud {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(0, 90, 75);
+  color: whitesmoke;
+  padding: 0.5rem;
+}
+
+section, form {
+  padding: 3rem 2rem;
+}
+
+section.quiz, form {
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.display-highscores {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+h1.title {
+  text-align: center;
+  color: rgb(0, 90, 75);
+}
+
+h2#question {
+  height: 5rem;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  background: rgb(0, 90, 75);
+  border-radius: 5px;
+  color: whitesmoke;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin: 0.5rem 0;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+ul li:hover {
+  color: white;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0,0,0,0.4);
+  transition-duration: 0.4s;
+}
+
+p.lead {
+  line-height: normal;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0.6rem;
+}
+
+.lead-alt {
+  color: rgb(0, 90, 75);
+}
+
+.lead-red {
+  color: rgb(221, 0, 0);
+}
+
+button {
+  border: none;
+  background-color: rgb(0, 90, 75);
+  border-radius: 4px;
+  color: whitesmoke;
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  width: 10rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+button#start-quiz, button#return {
+  margin: 0 auto;
+  margin-top: 1.2rem;
+  padding: 14px 34px;
+}
+
+button#submit-score {
+  margin: 0 8px 8px 8px;
+  padding: 9px 34px;
+}
+
+tr {
+  border-bottom: 1px solid rgb(0, 90, 75);
+}
+
+th {
+  background-color: rgb(0, 90, 75);
+  color: whitesmoke;
+}
+
+th, td {
+  padding: 0.3rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  header.hud {
+    width: 100%;
+  }
+  section.quiz {
+    width: 100%;
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Quiz</title>
+    <!-- Bootstrap CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/881878c1bb.js" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <!-- Header - HUD -->
+    <header class="hud">
+      <div class="highscores">
+        <a href="#" id="highscores-link">Highscores</a>
+      </div>
+      <div class="timer">
+        <div class="time">
+          Time: <span id="timer">00</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <section class="quiz" id="start">
+      <h1 class="title">Coding Quiz Challenge</h1>
+      <p class="lead">
+        <strong class="lead-alt">Start Quiz</strong> to answer a set of code-related questions. You're given <strong class="lead-alt">60 seconds</strong>, with the time remaining at the end of the quiz acting as your final score. Each incorrect answer will penalise your final score by <strong class ="lead-red">15 seconds</strong>.
+      </p>
+      <p class="lead">
+        <strong class="lead-alt">Good luck!</strong>
+      </p>
+      <button type="button" id="start-quiz">Start Quiz</button>
+    </section>
+
+    
+    <!-- Quiz complete -->
+    <section class="quiz" id="quiz-complete" hidden="hidden">
+      <h1 class="title">All done!</h2>
+        <p class="lead">You scored <span id="final-score"></span>!</p>
+        <form class="form-inline">
+          <label class="mr-3" for="initials">Enter your initials:</label>
+          <input type="text" class="form-control mb-2 mr-sm-2" id="initials">
+          <button type="submit" id="submit-score">Submit</button>
+        </form>
+      </section>
+      
+      <!-- Highscores -->
+      
+      <section class="display-highscores" hidden="hidden">
+        <h1 class="title">Highscores</h1>
+        <table class="highscores-table">
+          <thead>
+            <tr>
+              <th id="count">#</th>
+              <th id="set-by">Set by</th>
+              <th id="score">Score</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+        <ol class="highscores-list"></ol>
+        <button type="button" id="return">Return</button>
+      </section>
+      
+      <!-- Quiz -->
+      <form action="quiz">
+        <h2 id="question"></h2>
+        <ul id="options"></ul>
+      </form>
+
+      <!-- Javascript -->
+    <script src="script.js"></script>
+  </body>
+</html>
