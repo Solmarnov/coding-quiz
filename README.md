@@ -5,3 +5,4 @@ You're given 60 seconds to answer a set of code-related questions. The time left
 At the end of the quiz, you'll be able to save your score to local storage. 
 
 Website: 
+https://solmarnov.github.io/coding-quiz/
